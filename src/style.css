@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+canvas#webgl {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#audioPlayButton {
+    width: 5rem;
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+}
+.controllers {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 2rem 2rem;
+}
+
+#playPauseButton {
+    width: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.loading {
+    width: 60%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading #progress {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 200ms ease-in-out;
+}
